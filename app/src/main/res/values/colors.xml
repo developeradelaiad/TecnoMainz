@@ -4,4 +4,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="mohMohy">#D0BFF6</color>
     <color name="btn">#189457</color>
+
+
+    <color name="blue5">#ec2a0c</color>
+    <color name="blue2">#ff530e</color>
+    <color name="blue1">#2d328f</color>
+    <color name="blue3">#014a7f</color>
+    <color name="blue4">#05bfee</color>
 </resources>

@@ -13,13 +13,26 @@
         android:theme="@style/Theme.TecnoMainz"
         tools:targetApi="31">
         <activity
+            android:name=".client.DeleteClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".client.UpdateClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".client.AddClientActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TecnoMainz" />
+        <activity
+            android:name=".client.ClientActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".BaseActivity"
+            android:name=".base_activity.BaseActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

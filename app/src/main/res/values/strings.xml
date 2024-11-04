@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">TecnoMainz</string>
     <string name="user_name">UserName</string>
+    <string name="password">Password</string>
+    <string name="confirmpassword">ConfirmPassword</string>
+    <string name="email">Email</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="create_account">Create Account</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="client_name">Client Name</string>
+    <string name="invoice_code">Invoice code</string>
+    <string name="add_a_client">Add a client</string>
 </resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TecnoMainz</string>
+    <string name="user_name">اسم المستخدم</string>
+    <string name="password">كلمة المرور</string>
+    <string name="confirmpassword">تأكيد كلمة المرور</string>
+    <string name="email">البريد الالكترونى</string>
+    <string name="register">تسجيل</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="create_account">انشاء حساب</string>
+    <string name="forget_password">هل نسيت كلمة السر ?</string>
+    <string name="client_name">اسم العميل</string>
+    <string name="invoice_code">كود الفاتوره</string>
+    <string name="add_a_client">اضافه عميل</string>
+</resources>

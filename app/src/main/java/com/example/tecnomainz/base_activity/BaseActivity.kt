@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.tecnomainz.R
+import com.example.tecnomainz.client.ClientActivity
 import com.example.tecnomainz.databinding.ActivityBaseBinding
 
 class BaseActivity : AppCompatActivity() {
@@ -30,7 +31,7 @@ class BaseActivity : AppCompatActivity() {
         list.add(DataBase(R.drawable.delegate, "18", "The delegate"))
         list.add(DataBase(R.drawable.customer, "18", "Customer problems"))
         list.add(DataBase(R.drawable.comments, "18", "comments"))
-        binding.recycler.adapter = BaseRecycler(this, list)
+        binding.recycler.adapter = BaseAdapter(this, list)
 
 
         val shared = getSharedPreferences("login", MODE_PRIVATE)

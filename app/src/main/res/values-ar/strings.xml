@@ -12,4 +12,16 @@
     <string name="client_name">اسم العميل</string>
     <string name="invoice_code">كود الفاتوره</string>
     <string name="add_a_client">اضافه عميل</string>
+    <string name="total_amount">اجمالي المبلغ</string>
+    <string name="remaining_amount">المبلغ المتبقي</string>
+    <string name="payment_date">ميعاد الدفع</string>
+    <string name="delegate_name">اسم المندوب</string>
+    <string name="insect_type">نوع الحشره</string>
+    <string name="phone_num">رقم الهاتف</string>
+    <string name="other_num">رقم هاتف اخر</string>
+    <string name="address">العنوان</string>
+    <string name="details">التفاصيل</string>
+    <string name="time">الوقت</string>
+    <string name="date">التاريخ</string>
+    <string name="follow_ups">المتابعات</string>
 </resources>

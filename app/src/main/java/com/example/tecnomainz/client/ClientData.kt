@@ -24,6 +24,7 @@ class ClientData (
     val address:String,
     val details:String,
     val followers:String,
-    val date: Date,
-    val time: Time,
+//    val date: Date,
+//    val time: Time,
+    // TODO: Solve Date and Time Error
 ): Parcelable

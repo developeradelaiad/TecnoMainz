@@ -12,23 +12,25 @@ import com.example.tecnomainz.databinding.ActivityClientBinding
 
 class ClientActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityClientBinding
-    private  var viewModel = ViewModelProvider(this)[ClientViewModel::class.java]
+    // TODO: fix the view Model problem
+
+//    private var viewModel = ViewModelProvider(this)[ClientViewModel::class.java]
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding=ActivityClientBinding.inflate(layoutInflater)
+        val binding = ActivityClientBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        viewModel.getClient().observe(this){ client ->
-           val userName= client.map { it.userName }
-            binding.clientRecycler.adapter=ClientRecycler(this,userName)
-        }
+
+//        viewModel.getClient().observe(this){ client ->
+//           val userName= client.map { it.userName }
+//            binding.clientRecycler.adapter=ClientRecycler(this,userName)
+//        }
 
         binding.addClient.setOnClickListener {
             startActivity(Intent(this,AddClientActivity::class.java))

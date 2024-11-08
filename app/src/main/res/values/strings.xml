@@ -11,4 +11,16 @@
     <string name="client_name">Client Name</string>
     <string name="invoice_code">Invoice code</string>
     <string name="add_a_client">Add a client</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="remaining_amount">Remaining Amount</string>
+    <string name="payment_date">Payment Date</string>
+    <string name="delegate_name">Delegate Name</string>
+    <string name="insect_type">Insect Type</string>
+    <string name="phone_num">Phone Number</string>
+    <string name="other_num">Another Phone Number</string>
+    <string name="address">Address</string>
+    <string name="details">Details</string>
+    <string name="time">Time</string>
+    <string name="date">Date</string>
+    <string name="follow_ups">Follow Ups</string>
 </resources>

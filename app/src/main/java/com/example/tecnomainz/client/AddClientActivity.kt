@@ -13,10 +13,20 @@ class AddClientActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityAddClientBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        val addFields = mutableListOf(
+            R.string.invoice_code,
+            R.string.client_name,
+            R.string.total_amount,
+            R.string.remaining_amount,
+            R.string.delegate_name,
+            R.string.insect_type,
+            R.string.phone_num,
+            R.string.other_num,
+            R.string.details,
+            R.string.follow_ups,
+            R.string.date,
+            R.string.time
+            )
+        binding.addClientRv.adapter = AddClientAdapter(this, addFields)
     }
 }

@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tecnomainz.R
 
+// TODO: Edit the list item
 class AddClientAdapter(val a: Activity, val addFields: List<Int>): RecyclerView.Adapter<AddClientAdapter.VH>() {
     class VH(view: View): RecyclerView.ViewHolder(view) {
         val label: TextView = view.findViewById(R.id.client_add_tv)

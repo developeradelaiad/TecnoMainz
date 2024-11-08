@@ -7,6 +7,8 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.tecnomainz.R
 import com.example.tecnomainz.databinding.ActivityAddClientBinding
 
+    // TODO: Continue...
+
 class AddClientActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

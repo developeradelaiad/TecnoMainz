@@ -4,13 +4,18 @@ import android.app.Activity
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tecnomainz.R
+import com.google.android.material.textfield.TextInputEditText
 
 // TODO: Edit the list item
-class AddClientAdapter(private val a: Activity, private val addFields: List<Int>): RecyclerView.Adapter<AddClientAdapter.VH>() {
+class AddClientAdapter(private val a: Activity, private val addFields: List<AddClientItem>): RecyclerView.Adapter<AddClientAdapter.VH>() {
+
+
     class VH(view: View): RecyclerView.ViewHolder(view) {
         val label: TextView = view.findViewById(R.id.client_add_tv)
+        val input: TextInputEditText = view.findViewById(R.id.client_add_et)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
@@ -21,6 +26,6 @@ class AddClientAdapter(private val a: Activity, private val addFields: List<Int>
     override fun getItemCount() = addFields.size
 
     override fun onBindViewHolder(holder: VH, position: Int) {
-        holder.label.setText(addFields[position])
+        holder.label.setText(addFields[position].name)
     }
 }

@@ -31,6 +31,7 @@
         android:paddingStart="16dp"
         android:layout_width="match_parent"
         app:layout_constraintTop_toTopOf="@id/client_add_ev"
+        android:id="@+id/client_add_et"
         android:textSize="24sp"
         android:background="@drawable/list_add_et"
         android:fontFamily="serif-monospace"

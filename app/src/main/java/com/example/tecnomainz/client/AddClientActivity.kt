@@ -1,17 +1,12 @@
 package com.example.tecnomainz.client
 
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.RecyclerView
 import com.example.tecnomainz.R
 import com.example.tecnomainz.databinding.ActivityAddClientBinding
 import com.google.android.material.textfield.TextInputEditText
-
-// TODO: Continue...
-// TODO: Solve infinite loop of adding data
 
 class AddClientActivity : AppCompatActivity() {
 
@@ -38,29 +33,32 @@ class AddClientActivity : AppCompatActivity() {
         )
         adapter = AddClientAdapter(this, addFields)
         binding.addClientRv.adapter = adapter
+
         // Checking User Data
-        val editTextData = mutableListOf<String>()
         binding.addClientBtn.setOnClickListener {
-            if (adapter != null) {
-                for (i in 0 until adapter.itemCount) {
-                    val viewHolder =
-                        binding.addClientRv.findViewHolderForAdapterPosition(i) as? AddClientAdapter.VH
-                    if (viewHolder != null) {
-                        val editText =
-                            viewHolder.itemView.findViewById<TextInputEditText>(R.id.client_add_et)
-                            editTextData.add(editText.text.toString())
-                    }
+            if (areAllFieldsFilled()) {
+                addClient()
+            } else {
+                Toast.makeText(this, "Please Fill All Fields", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun areAllFieldsFilled(): Boolean {
+        for (i in 0 until adapter.itemCount) {
+            val viewHolder = binding.addClientRv.findViewHolderForAdapterPosition(i) as? AddClientAdapter.VH
+            viewHolder?.let {
+                val text = it.itemView.findViewById<TextInputEditText>(R.id.client_add_et).text.toString().trim()
+                if (text.isEmpty()) {
+                    return false
                 }
             }
-            validateData()
         }
-
-    }
-    private fun validateData() {
-        Toast.makeText(this, "Validating Data...", Toast.LENGTH_SHORT).show()
+        return true
     }
 
     private fun addClient() {
-        TODO("Not yet implemented")
+        // TODO: Add actual client
+        Toast.makeText(this, "Adding Client...", Toast.LENGTH_SHORT).show()
     }
 }
